@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <title>නන්දිවාණිජ කතා වස්තුව</title>
+  <link href="./Thorana-text files/style.css" rel="stylesheet" type="text/css">
+  <style>
+    #toggle-btn {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #007BFF;
+      border: none;
+      border-radius: 0.5em;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    #toggle-btn:hover {
+      background: #0056b3;
+    }
+    #toggle-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    #toggle-btn:focus {
+      outline: 2px solid #0056b3;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <table cellpadding=0 cellspacing=0 align=center>
+    <tr>
+     <td width=0 height=0></td>
+     <td width=63></td>
+     <td width=5></td>
+     <td width=177></td>
+     <td width=63></td>
+     <td width=5></td>
+     <td width=4></td>
+     <td width=56></td>
+     <td width=6></td>
+     <td width=239></td>
+     <td width=6></td>
+     <td width=51></td>
+     <td width=6></td>
+     <td width=10></td>
+     <td width=65></td>
+     <td width=170></td>
+     <td width=10></td>
+     <td width=65></td>
+    </tr>
+    <tr>
+     <td height=16></td>
+     <td colspan=8></td>
+     <td colspan=2 rowspan=3 align=left valign=top><span style='position:absolute;
+     z-index:251678720;margin-left:0px;margin-top:6px;width:245px;height:245px'><img
+     width=245 height=245 src="Thorana-text files/1.gif"></span></td>
+    </tr>
+    <tr>
+     <td height=6></td>
+     <td colspan=8></td>
+     <td colspan=3></td>
+     <td colspan=3 rowspan=3 align=left valign=top><img width=245 height=245
+     src="Thorana-text files/2.gif"></td>
+    </tr>
+    <tr>
+     <td height=229></td>
+     <td></td>
+     <td colspan=3 rowspan=3 align=left valign=top><img width=245 height=245
+     src="Thorana-text files/3.gif"></td>
+    </tr>
+    <tr>
+     <td height=10></td>
+    </tr>
+    <tr>
+     <td height=6></td>
+    </tr>
+    <tr>
+     <td height=6></td>
+    </tr>
+    <tr>
+     <td height=40></td>
+     <td colspan=6></td>
+     <td colspan=5 rowspan=7 align=left valign=top><img width=358 height=358
+     src="Thorana-text files/11.gif"></td>
+    </tr>
+    <tr>
+     <td height=10></td>
+     <td colspan=6></td>
+     <td colspan=3></td>
+     <td colspan=3 rowspan=2 align=left valign=top><img width=245 height=245
+     src="Thorana-text files/8.gif"></td>
+    </tr>
+    <tr>
+     <td height=235></td>
+     <td colspan=3 rowspan=2 align=left valign=top><img width=245 height=245
+     src="Thorana-text files/6.gif"></td>
+    </tr>
+    <tr>
+     <td height=10></td>
+    </tr>
+    <tr>
+     <td height=33></td>
+    </tr>
+    <tr>
+     <td height=7></td>
+     <td colspan=6></td>
+     <td></td>
+     <td colspan=3 rowspan=4 align=left valign=top><img width=245 height=245
+     src="Thorana-text files/4.gif"></td>
+    </tr>
+    <tr>
+     <td height=23></td>
+     <td colspan=2></td>
+     <td colspan=3 rowspan=4 align=left valign=top><img width=245 height=245
+     src="Thorana-text files/9.gif"></td>
+    </tr>
+    <tr>
+     <td height=31></td>
+    </tr>
+    <tr>
+     <td height=184></td>
+     <td colspan=2></td>
+     <td colspan=2></td>
+     <td colspan=2 rowspan=3 align=left valign=top><span style='position:absolute;
+     z-index:251682816;margin-left:0px;margin-top:0px;width:245px;height:245px'><img
+     width=245 height=245 src="Thorana-text files/10.gif"></span></td>
+    </tr>
+    <tr>
+     <td height=7></td>
+    </tr>
+    <tr>
+     <td height=54></td>
+    </tr>
+   </table>
+
+
+  <!-- Hidden audio -->
+  <audio id="bg-audio" loop>
+    <source src="index-files/voice.MP3" type="audio/mp4">
+    Your browser does not support HTML5 audio.
+  </audio>
+
+  <!-- Toggle button -->
+  <div style="text-align:center; margin:20px 0;">
+    <button id="toggle-btn">▶️ Play Voice</button>
+  </div>
+
+  <!-- Disable right-click -->
+  <script>
+    const message = "අදින්නාදාන වේරමණී සික්ඛාපදන් සමාදියාමි!";
+    function clickIE4() {
+      if (event.button === 2) { alert(message); return false; }
+    }
+    function clickNS4(e) {
+      if (document.layers || (document.getElementById && !document.all)) {
+        if (e.which === 2 || e.which === 3) { alert(message); return false; }
+      }
+    }
+    if (document.layers) {
+      document.captureEvents(Event.MOUSEDOWN);
+      document.onmousedown = clickNS4;
+    } else if (document.all && !document.getElementById) {
+      document.onmousedown = clickIE4;
+    }
+    document.oncontextmenu = () => { alert(message); return false; };
+  </script>
+
+  <!-- Audio toggle script -->
+  <script>
+    const audio     = document.getElementById('bg-audio');
+    const toggleBtn = document.getElementById('toggle-btn');
+    let isPlaying   = false;
+
+    toggleBtn.addEventListener('click', () => {
+      if (!isPlaying) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+
+    audio.addEventListener('play', () => {
+      isPlaying = true;
+      toggleBtn.textContent = '🔇 Stop Voice';
+    });
+    audio.addEventListener('pause', () => {
+      isPlaying = false;
+      toggleBtn.textContent = '▶️ Play Voice';
+    });
+  </script>
+
+</body>
+</html>
